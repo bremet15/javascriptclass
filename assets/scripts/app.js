@@ -29,6 +29,15 @@ function calculate(calculateType) {
   const startResult = currentResult;
   let mathOperator;
 
+  if( calculateType !== 'ADD' &&
+  calculateType !== 'SUBTRACT' &&
+  calculateType !== 'MULTIPLY' &&
+  calculateType !== 'DIVIDE'
+  ){
+    return;
+  }
+
+
   if (calculateType === 'ADD') {
     currentResult += enteredNumber;
     mathOperator = '+';
